@@ -7,25 +7,30 @@
     <meta charset="utf-8">
     <!-- 웹브라우저를 열때 default 값으로 utf-8로 설정,
     한글 표시하게 해줌-->
+    <link rel="stylesheet" href="style.css">
   </head>
 
   <!-- 본문-->
   <body>
     <!--본문은 body로 묶어야함-->
     <h1><a href ="index.html">WEB</a></h1>
-    <ol>
-      <a href ="1.html"><li>HTML</a></li>
-      <a href ="2.html"><li>CSS</a></li>
-      <a href ="3.html"><li>JavaScript</a></li>
-    </ol>
-    <!--or : ordered list, ul : unordered list -->
-    <h2>JavaScript</h2>
-    <p>
-      <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank" title = "html5 specification">JavaScript</a>
-      <!-- title로 클릭하기 전 설명 부여. target="_blank"는 새로운 페이지로 열게 해줌. 링크를 걸고 싶은 곳에 a태그, href속성 설정 Hypertext reference--> often abbreviated as JS, is a high-level, interpreted programming language. It is a language which is also characterized as dynamic, weakly typed, prototype-based and multi-paradigm.
-    </P>
-    <!-- 단락을 나타내는 태그는 p, 단순 줄바꿈은 br -->
-    <img src ="exam3.jpg" width="100%">
-    <!-- 사용하려는 이미지는 workspace에 저장되야함-->
+      <div id="grid">
+      <ol>
+        <a href ="1.html"><li>HTML</a></li>
+        <a href ="2.html"><li>CSS</a></li>
+        <a href ="3.html"><li>JavaScript</a></li>
+      </ol>
+      <!--or : ordered list, ul : unordered list -->
+      <div id="article">
+      <h2>JavaScript</h2>
+      <p>
+        <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank" title = "html5 specification">JavaScript</a>
+        <!-- title로 클릭하기 전 설명 부여. target="_blank"는 새로운 페이지로 열게 해줌. 링크를 걸고 싶은 곳에 a태그, href속성 설정 Hypertext reference--> often abbreviated as JS, is a high-level, interpreted programming language. It is a language which is also characterized as dynamic, weakly typed, prototype-based and multi-paradigm.
+      </P>
+      <!-- 단락을 나타내는 태그는 p, 단순 줄바꿈은 br -->
+      <img src ="exam3.jpg" width="100%">
+      <!-- 사용하려는 이미지는 workspace에 저장되야함-->
+    </div>
+  </div>
   </body>
 </html>

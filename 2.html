@@ -7,28 +7,37 @@
     <meta charset="utf-8">
     <!-- 웹브라우저를 열때 default 값으로 utf-8로 설정,
     한글 표시하게 해줌-->
+    <!-- 별도의 파일을 지정해서 연결 -->
+    <link rel="stylesheet" href="style.css">
   </head>
+
 
   <!-- 본문-->
   <body>
     <!--본문은 body로 묶어야함-->
     <h1><a href ="index.html">WEB</a></h1>
+  <div id="grid">
     <ol>
-      <a href ="1.html"><li>HTML</a></li>
-      <a href ="2.html"><li>CSS</a></li>
-      <a href ="3.html"><li>JavaScript</a></li>
+      <a href ="1.html" ><li>HTML</a></li>
+      <a href ="2.html" id = "active"><li>CSS</a></li>
+      <a href ="3.html"><li>JavaScript</font></a></li>
     </ol>
     <!--or : ordered list, ul : unordered list -->
-    <h2>CSS</h2>
-    <p>
-      <a href="https://www.w3schools.com/css/" target="_blank" title = "CSS specification">Cascading Style Sheets (CSS)</a>
-      <!-- title로 클릭하기 전 설명 부여. target="_blank"는 새로운 페이지로 열게 해줌. 링크를 걸고 싶은 곳에 a태그, href속성 설정 Hypertext reference--> is a style sheet language used for describing the presentation of a document written in a markup language like HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.
-    </P>
+    <div id="article">
+      <!-- div태그는 디자인만을 위함. 아무 기능 x-->
+      <h2>CSS</h2>
+      <p>
+        <a href="https://www.w3schools.com/css/" target="_blank" title = "CSS specification">Cascading Style Sheets (CSS)</a>
+        <!-- title로 클릭하기 전 설명 부여. target="_blank"는 새로운 페이지로 열게 해줌. 링크를 걸고 싶은 곳에 a태그, href속성 설정 Hypertext reference--> is a style sheet language used for describing the presentation of a document written in a markup language like HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.
+      </P>
+
     <!-- 단락을 나타내는 태그는 p, 단순 줄바꿈은 br -->
     <img src ="exam2.jpg" width="100%">
     <!-- 사용하려는 이미지는 workspace에 저장되야함-->
     <p>
       CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts.
     </p>
+  </div>
+</div>
   </body>
 </html>

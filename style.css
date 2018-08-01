@@ -1,0 +1,43 @@
+body {
+  margin:0;
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+h1 {
+  font-size :100px;
+  text-align: center;
+  border-bottom:1px solid gray;
+  /*아래쪽에 밑줄*/
+  margin:0;
+  padding:20px;
+}
+#grid ol {
+  /*웹페이지에 있는 모든 ol태그중 부모가 grid아이디*/
+  border-right: 1px solid gray;
+  width:100px;
+  margin:0;
+  padding-left: :33px;
+}
+#grid {
+  display: grid;
+  grid-template-columns: 150px 1fr; /* 각 값의 순서에 따라 적음*/
+}
+#grid #article {
+  padding-left: 25px;
+}
+@media(max-width:800px)
+/*화면크기가 800보다 작을 때*/
+  {
+  #grid {
+    display: block;
+    /*조건 만족하면 id가 grid인 값은 block으로 바뀜, 각각의 태그가 화면 전체를 사용하게 됨*/
+  }
+   #grid ol {
+    border-right:none;
+  }
+  h1 {
+    border-bottom:none;
+  }
+}
