@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    #grid {
+      border:5px solid pink;
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      /*1fr은 유동적으로 크기 변환*/
+    }
+    div {
+      border:5px solid gray;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="grid">
+    <div>NAVIGATION</div>
+    <div>ARTICLE</div>
+    <!-- block단위가 필요한 경우 div, inline 단위가 필요한 경우 span-->
+  </div>
+  </body>
+</html>

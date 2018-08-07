@@ -5,15 +5,15 @@
       <!--본문을 설명하는 태그는 head로 표시-->
     <title>WEB - JavaScript</title>
     <meta charset="utf-8">
-    <!-- 웹브라우저를 열때 default 값으로 utf-8로 설정,
-    한글 표시하게 해줌-->
     <link rel="stylesheet" href="style.css">
   </head>
-
-  <!-- 본문-->
   <body>
-    <!--본문은 body로 묶어야함-->
     <h1><a href ="index.html">WEB</a></h1>
+      <input type ="button" value = "night" onclick="
+      document.querySelector('body').style.backgroundColor ='black';
+      document.querySelector('body').style.color ='white';">
+      <!-- body태그를 선택, 이벤트 발생시-->
+      <input type ="button" value = "day">
       <div id="grid">
       <ol>
         <a href ="1.html"><li>HTML</a></li>
