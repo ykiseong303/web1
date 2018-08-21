@@ -2,35 +2,62 @@
 <html>
 <!--전체적으로 묶어주는 html태그-->
   <head>
-      <!--본문을 설명하는 태그는 head로 표시-->
     <title>WEB - JavaScript</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="style.css">
+    <script>
+    function LinksSetColor(color) {
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while (i < alist.length) {
+        alist[i].style.color = color;
+        i = i+1;
+      }
+    }
+    function BodySetColor(color) {
+      document.querySelector('body').style.color = color;
+    }
+    function BodySetBackgroundColor(color) {
+      document.querySelector('body').style.backgroundColor = color;
+    }
+    function nightDayHandler(self) {
+        var target = document.querySelector('body');
+      //this가 아닌 self : this는 해당 이벤트에 대한 태그를 가리킴
+      //독립된 함수를 만들면 해당함수는 전역객체를 가리킴.
+        if(self.value === 'night') {
+        BodySetBackgroundColor('black');
+        BodySetColor('white');
+        self.value = 'day';
+        LinksSetColor('powderblue');
+
+      }
+      else {
+        BodySetBackgroundColor('white');
+        BodySetColor('black');
+        self.value = 'night';
+        LinksSetColor('blue');
+      }
+    }
+    </script>
   </head>
+
   <body>
     <h1><a href ="index.html">WEB</a></h1>
-      <input id="night_day" type="button" value = "night" onclick="
-      if(document.querySelector('#night_day').value === 'night') {
-      document.querySelector('body').style.backgroundColor ='black';
-      document.querySelector('body').style.color ='white';
-      document.querySelector('#night_day').value = 'day';
-    }
-      else {
-      document.querySelector('body').style.backgroundColor='white';
-      document.querySelector('body').style.color='black';
-      document.querySelector('#night_day').value = 'night';
-    }
-      ">
-      <!-- 버튼의 value값을 지정해주고 그 값을 비교연산자를 통해 비교.
+      <input type ="button" value ="night" onclick ="nightDayHandler(this)">
+      <!--
+      input 태그에서 onclick에서 사용하는 값은 자기 자신이므로
+      this 태그를 통해 교체, body 셀렉터 중복에 대한 부분은 var변수
+      선언에 자바스크립트를 할당시켜서 중복을 없앰.
+
+      버튼의 value값을 지정해주고 그 값을 비교연산자를 통해 비교.
       그리고 조건문 연산 후, 다음 비교를 위해 반대 값으로 토글시켜줌-->
-      <div id="grid">
+
       <ol>
         <a href ="1.html"><li>HTML</a></li>
         <a href ="2.html"><li>CSS</a></li>
         <a href ="3.html"><li>JavaScript</a></li>
       </ol>
       <!--or : ordered list, ul : unordered list -->
-      <div id="article">
+
       <h2>JavaScript</h2>
       <p>
         <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank" title = "html5 specification">JavaScript</a>
@@ -39,7 +66,6 @@
       <!-- 단락을 나타내는 태그는 p, 단순 줄바꿈은 br -->
       <img src ="exam3.jpg" width="100%">
       <!-- 사용하려는 이미지는 workspace에 저장되야함-->
-    </div>
-  </div>
+
   </body>
 </html>
